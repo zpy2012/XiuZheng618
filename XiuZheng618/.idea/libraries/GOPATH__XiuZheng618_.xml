@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;XiuZheng618&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../qortest" />
+      <root url="file://$PROJECT_DIR$/../.git" />
+      <root url="file://$PROJECT_DIR$/../OPMS" />
+      <root url="file://$PROJECT_DIR$/../fofou-master" />
+      <root url="file://$PROJECT_DIR$/../FlowerStore" />
+      <root url="file://$PROJECT_DIR$/../CarSingleView" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopub" />
+      <root url="file://$PROJECT_DIR$/../52XueLiWang" />
+      <root url="file://$PROJECT_DIR$/../GostSpider" />
+      <root url="file://$PROJECT_DIR$/../BookManager" />
+      <root url="file://$PROJECT_DIR$/../FlowerWeChat" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../qortest" />
+      <root url="file://$PROJECT_DIR$/../.git" />
+      <root url="file://$PROJECT_DIR$/../OPMS" />
+      <root url="file://$PROJECT_DIR$/../fofou-master" />
+      <root url="file://$PROJECT_DIR$/../FlowerStore" />
+      <root url="file://$PROJECT_DIR$/../CarSingleView" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopub" />
+      <root url="file://$PROJECT_DIR$/../52XueLiWang" />
+      <root url="file://$PROJECT_DIR$/../GostSpider" />
+      <root url="file://$PROJECT_DIR$/../BookManager" />
+      <root url="file://$PROJECT_DIR$/../FlowerWeChat" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

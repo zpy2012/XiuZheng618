@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
+		<title>疯狂动销 抽大奖</title>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+		<!--<link rel="stylesheet" type="text/css" href="static/css/linshi.css"/>-->
+	</head>
+	<body>
+		<div class="box">
+			<div class="content" style="text-align: center">
+				<div class="title title2">
+					<p>优尔让你·快乐赚钱·乐翻天</p>
+				</div>
+				<div class="zjy_lhj zjy_lhj325">
+					<div class="zjy_lhj_j">
+						<span class="slotMachinebg slotMachinebg1">
+							<div id="machine1" class="slotMachine">
+								<div class="slot slot1"></div>
+								<div class="slot slot2"></div>
+								<div class="slot slot3"></div>
+								<div class="slot slot4"></div>
+							</div>
+						</span>
+						<span class="slotMachinebg slotMachinebg2">
+							<div id="machine2" class="slotMachine">
+								<div class="slot slot1"></div>
+								<div class="slot slot2"></div>
+								<div class="slot slot3"></div>
+								<div class="slot slot4"></div>
+							</div>
+						</span>
+						<span class="slotMachinebg slotMachinebg3">
+							<div id="machine3" class="slotMachine">
+								<div class="slot slot1"></div>
+								<div class="slot slot2"></div>
+								<div class="slot slot3"></div>
+								<div class="slot slot4"></div>
+							</div>
+						</span>
+					</div>
+					<button id="slotMachineButton1" class="slotMachineButton"></button>
+				</div>
+				<div style="display: none;" id="code">{{.Code}}</div>
+				<div class="zjy_prizeroll">
+					<div class="zjy_prizeroll_content">
+						<div class="zjy_prizerolllong">
+							<div class="zjy_prizerollshort zjy_prizerollshort1">
+								<div class="zjy_one zjy_jp">
+									<img src="static/img/Luckdraw_ydj.png" alt="" />
+								</div>
+								<p>现金两万</p>
+							</div>
+							<div class="zjy_prizerollshort">
+								<div class="zjy_twe zjy_jp">
+									<img src="static/img/Luckdraw_rdj.png"/>
+								</div>
+								<p>纯金斧头章1枚</p>
+							</div>
+							<div class="zjy_prizerollshort zjy_prizerollshort3">
+								<div class="zjy_three zjy_jp">
+									<img src="static/img/Luckdraw_sdj.png" alt="" />
+								</div>
+								<p>玉髓首饰一套</p>
+							</div>
+							<div class="zjy_prizerollshort">
+								<div class="zjy_four zjy_jp">
+									<img src="static/img/Luckdraw_jncy.png" alt="" />
+								</div>
+								<p>纪念参与奖</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="zjy_mtk">
+				<div class="zjy_mtkbg">
+					<p class="zjy_mtk_p1">获得<span class="zjy_jspan">一</span>等奖</p>
+					<p class="zjy_mtk_p2">两万元现金</p>
+					<div class="zjy_mtkjp">
+						<img src="static/img/Luckdraw_gqy.png" alt="" class="zjy_1dj"/>
+						<img src="static/img/Luckdraw_gqe.png" alt="" class="zjy_2dj"/>
+						<img src="static/img/Luckdraw_gqs.png" alt="" class="zjy_3dj"/>
+						<img src="static/img/Luckdraw_gqsi.png" alt="" class="zjy_4dj"/>
+					</div>
+					<div class="zjy_btnqrdiv">
+						<button class="zjy_btnqr">确 定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zjy_modal">
+			<div class="zjy_modaltoast" >
+				<img src="static/img/xxx.png"/>
+				<p>您输入的抽奖码不能用了！</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="static/js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="static/js/jquery.slotmachine.js"></script>
+		<script type="text/javascript" src="static/js/index.js" ></script>
+		<script>
+			$(document).ready(function(){
+				var i=0;
+				var severalprizes=4;//0是一等奖，1是二等奖，2是三等奖，3是四等奖
+				var machine1 = $("#machine1").slotMachine({
+					active	: 3,
+					delay	: 500
+				});
+				var machine2 = $("#machine2").slotMachine({
+					active	: 3,
+					delay	: 500
+				});
+				var machine3 = $("#machine3").slotMachine({
+					active	: 3,
+					delay	: 500
+				});
+				var touchs = document.getElementById("slotMachineButton1");
+				
+				touchs.addEventListener("touchstart", function(e){ 
+					touchs.style.background="url(static/img/Luckdraw_kscj.png) no-repeat center bottom";
+					touchs.style.backgroundSize="100% 80%";
+					e.preventDefault();
+				});
+				touchs.addEventListener("touchend", function(e){ 
+					touchs.style.background="url(static/img/Luckdraw_kscj.png) no-repeat center bottom";
+					touchs.style.backgroundSize="100% 100%";
+					code = $("#code").text();
+					$.post("/start",
+					    {
+					      code:code
+					    },
+					    function(data,status){
+						    if (data.Msg == "成功") {
+						    	severalprizes = data.Awd-1;
+						      	if(i==0){
+									i=1;
+									machine1.shuffle(5 ,severalprizes);
+									setTimeout(function(){
+										machine2.shuffle(5, severalprizes);
+									}, 500);
+									setTimeout(function(){
+										machine3.shuffle(5, severalprizes);
+									}, 1000);
+									setTimeout(function(){
+										if(severalprizes==0){
+											$(".zjy_jspan").text("一");
+											$(".zjy_mtk_p2").text("两万元现金");
+											$(".zjy_mtkjp img").css("display","none");
+											$(".zjy_1dj").css("display","block");
+										}else if(severalprizes==1){
+											$(".zjy_jspan").text("二");
+											$(".zjy_mtk_p2").text("纯金斧头章1枚");
+											$(".zjy_mtkjp img").css("display","none");
+											$(".zjy_2dj").css("display","block");
+										}else if(severalprizes==2){
+											$(".zjy_jspan").text("三");
+											$(".zjy_mtk_p2").text("玉髓首饰一套");
+											$(".zjy_mtkjp img").css("display","none");
+											$(".zjy_3dj").css("display","block");
+										}else if(severalprizes==3){
+											$(".zjy_jspan").text("四");
+											$(".zjy_mtk_p2").text("纪念参与奖");
+											$(".zjy_mtkjp img").css("display","none");
+											$(".zjy_4dj").css("display","block");
+										}
+										$(".zjy_mtk").fadeIn();
+									}, 3500);
+									$(".zjy_btnqr").click(function(){
+										window.location.href="/";
+									});
+									e.preventDefault();
+								}
+						    }else{
+						      	$(".zjy_modaltoast p").html(data.Msg);
+						      	$(".zjy_modal").fadeToggle().css("display","block");
+								setTimeout(function(){
+									$(".zjy_modal").fadeToggle().css("display","none");
+								},1500);
+						    }
+				    	});
+					});
+				var height =$(".zjy_height").height();
+				var htmlheight = $(window).height();
+				if(height>htmlheight){
+					$(".line").css("height",(height+10)+"px");
+				}
+			});
+		</script>
+	</body>
+</html>

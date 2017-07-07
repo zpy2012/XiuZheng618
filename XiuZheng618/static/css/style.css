@@ -1,0 +1,697 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+center, u, b, i {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     font-weight: normal;
+     font-style: normal;
+     font-size: 100%;
+     font-family: '微软雅黑';
+     vertical-align: baseline
+}
+
+body {
+     line-height: 1
+}
+
+:focus {
+     outline: 0
+}
+
+ol, ul {
+     list-style: none
+}
+
+table {
+     border-collapse: collapse;
+     border-spacing: 0
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+     content: ""
+}
+
+blockquote, q {
+     quotes: "" ""
+}
+button{
+	outline: none;
+	border: 0;
+}
+input, textarea {
+     margin: 0;
+     padding: 0
+}
+
+hr {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     color: #000;
+     background-color: #000;
+     height: 1px
+}
+
+a img {
+	border:none
+}
+
+/* Estilos Genericos del site
+-------------------------------------------------------------------------*/
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+html{
+	/*overflow-y: scroll;*/
+}
+body { 
+	background:#fff; 
+	color:#000000; 
+	font-size:14px;
+}
+
+p{ 
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+	
+}
+
+
+.box{
+	width: 100%;
+	height: 100%;
+	background: url(../img/Luckdraw_bj.jpg) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+}
+.luckdraw{
+	position: absolute;
+	top: 40%;
+	left: 5%;
+	width: 90%;
+	height: 233px;
+	background: url(../img/Luckdraw_sr.png) no-repeat center top;
+	background-size: 100%;
+}
+.title p{
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 1.7%;
+}
+.inputbox{
+	height: 13.7%;
+}
+.inputbox input{
+	display: block;
+	width: 56%;
+	height: 100%;
+	margin: 15% auto 0;
+	border-radius: 6px;
+	border: 0;
+	outline: none;
+	font-size: 15px;
+	padding-left: 10px;
+	text-align: center;
+}
+.clickon{
+	width: 40%;
+	height: 21%;
+	margin: 10% auto 0;
+	background: url(../img/Luckdraw_djcj.png) no-repeat center bottom;
+	background-size: 100% 100%;
+}
+.notevent{
+	position: absolute;
+	bottom: 5%;
+}
+.notevent_content{
+	width: 70%;
+	margin: 0 auto;
+	color: #fefefe;
+}
+.notevent_content p{
+	font-size: 13px;
+	line-height: 25px;
+}
+.zjy_modal{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: none;
+}
+.zjy_modaltoast{
+	width: 210px;
+	height: 206px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin: -103px 0 0 -105px;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, .7);
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+}
+.zjy_modaltoast img{
+	display: block;
+	padding-top: 21px;
+	margin: 0 auto;
+}
+.zjy_modaltoast p{
+	margin-top: 31px;
+	text-align: center;
+	color: #FFFFFF;
+}
+/*Startdraw*/
+.content{
+	background: url(../img/Luckdraw_lhj.png) no-repeat center center;
+	background-size: 100% ;
+	width: 90%;
+	height: 333px;
+	position: absolute;
+	top: 40%;
+	left:5%;
+}
+.slotMachineButton{
+	width: 47%;
+	height: 31%;
+	margin: 1% auto 0;
+	background: url(../img/Luckdraw_kscj.png) no-repeat center bottom;
+	background-size: 100% 100%;
+}
+
+.slotMachinebg{
+	height:86px;
+	margin-left: 3%;
+	width: 29.33%;
+	float: left;
+	overflow: hidden;
+}
+.slotMachine{
+	width:100%;
+	height: 86px;
+	text-align: center;
+}
+
+.slotMachinebg1{
+	background: url(../img/Luckdraw_cjleft.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+.slotMachinebg2{
+	background: url(../img/Luckdraw_cjmiddle.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+.slotMachinebg3{
+	background: url(../img/Luckdraw_cjright.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+
+.slotMachine .slot{
+	width:100%;
+	height:86px;
+}
+.slot1{
+	background: url(../img/Luckdraw_ydj.png) no-repeat center center;
+	background-size: 80% 50%;
+}
+.slot2{
+	background: url(../img/Luckdraw_rdj.png) no-repeat center center;
+	background-size: 60% 50%;
+}
+.slot3{
+	background: url(../img/Luckdraw_sdj.png) no-repeat center center;
+	background-size: 75% 60%;
+}
+.slot4{
+	background: url(../img/Luckdraw_jncy.png) no-repeat center center;
+	background-size: 40% 60%;
+}
+.zjy_lhj{
+	height: 45%;
+	width: 83%;
+	margin: 10% auto 0;
+}
+.zjy_lhj_j{
+	overflow: hidden;
+}
+.zjy_prizeroll{
+	padding-top:8%;
+}
+.zjy_prizeroll_content{
+	overflow: auto;
+	width: 90%;
+	margin: 0 auto;
+}
+.zjy_prizerolllong{
+	overflow: hidden;
+	height: 105px;
+	width: 340px;
+}
+.zjy_prizerollshort p{
+	padding-top: 5px;
+	line-height: 13px;
+	color: #FFFFFF;
+	font-size: 10px;
+	padding-top: 3px;
+	line-height: 12px;
+	text-align: center;
+}
+.zjy_prizerollshort{
+	float: left;
+	margin-left: 8px;
+}
+.zjy_prizerollshort3{
+	width: 75px;
+}
+.zjy_jp{
+	width: 75px;
+	height: 75px;
+	background: #ff8b95;
+}
+
+.zjy_jp img{
+	display: block;
+	padding-top: 15px;
+	margin: 0 auto;
+	width: 80%;
+}
+.zjy_four img{
+	padding-top: 10px;
+	width: 45%;
+}
+.zjy_three img{
+	width: 86%;
+}
+.zjy_twe img{
+	width: 57%;
+}
+.zjy_mtk{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .7);
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: none;
+}
+.zjy_mtkbg{
+	width: 75%;
+	height: 292px;
+    margin: 10% auto 0;
+    padding-top: 192px;
+	background: url(../img/Luckdraw_gxn.png) no-repeat center bottom;
+	background-size: 100%;
+}
+.zjy_mtkjp{
+	width: 82%;
+	margin: 0 auto;
+	height: 175px;
+}
+.zjy_mtkjp img{
+	display: block;
+	margin: 0 auto;
+	display: none;
+	padding-top: 36px;
+}
+.zjy_1dj{
+	width: 80%;
+}
+.zjy_2dj{
+	width: 44%;
+}
+.zjy_3dj{
+	width: 57%;
+}
+.zjy_4dj{
+	height: 65%;
+}
+.zjy_mtk_p1{
+	font-size: 17px;
+}
+.zjy_mtk_p2{
+	padding-top: 10px;
+	font-size: 16px;
+}
+.zjy_mtkbg p{
+	font-weight: 500;
+	text-align: center;
+}
+.zjy_btnqr{
+	background: url(../img/Luckdraw_qd.png) no-repeat center center;
+	width: 64%;
+	height: 40px;
+	margin: 0 auto;
+	display: block;
+	color: #FFFFFF;
+	background-size: 100% 100%;
+	font-size: 18px;
+	/*letter-spacing: 20px;*/
+	text-shadow: 1px 1px 0 rgba(197,113,12,.35);
+  -webkit-text-shadow: 1px 1px 0 rgba(197,113,12,.35);
+  -moz-text-shadow: 1px 1px 0 rgba(197,113,12,.35);
+}
+
+
+@media only screen and (min-width: 769px) {
+	.luckdraw{
+		background-size: 100% 100%;
+		height: 465px;
+		left: 10%;
+    	width: 80%;
+	}
+	.notevent{
+		left: 10%;
+	}
+	.notevent_content p{
+		font-size: 26px;
+    	line-height: 35px;
+	}
+	/*Startdraw*/
+	.content{
+		background-size: 100% 100%;
+		height: 700px;
+		width: 80%;
+		left: 10%;
+	}
+	.title p{
+		margin-top: 2.5%;
+		font-size: 30px;
+	}	
+	.slotMachineButton{
+		height: 35%;
+		margin: 2% auto 0;
+	}
+	.slotMachinebg,.slotMachine .slot,.slotMachine{
+		height: 170px;
+	}
+	.slot1{
+		background-size: 68% 50%;
+	}
+	.slot4{
+		background-size: 29% 60%;
+	}
+	.slot2{
+		background-size: 39% 50%;
+	}
+	.slot3{
+		background-size: 60% 60%;
+	}
+	.zjy_prizerolllong{
+		width: 830px;
+		height: 200px;
+	}
+	.zjy_prizerollshort3,.zjy_jp{
+		width: 190px;
+		height: 166px;
+	}
+	.zjy_prizerollshort{
+		margin-left: 13px;
+	}
+	.zjy_prizeroll {
+	    padding-top: 6%;
+	}
+	.zjy_prizerollshort p{
+		font-size: 24px;
+    	line-height: 26px;
+	}
+	.zjy_jp img {
+		padding-top: 30px;
+	}
+	.zjy_three img {
+	    width: 68%;
+	}
+	.zjy_four img {
+	    width: 36%;
+	}
+	.zjy_lhj{
+		margin: 9% auto 0;
+	}
+	.zjy_mtkbg{
+		background-size: 100% 100%;
+	    width: 70%;
+	    height: 729px;
+	    margin: 10% auto 0;
+	    padding-top: 380px;
+	}
+	.zjy_mtk_p1 {
+	    font-size: 34px;
+	}
+	.zjy_mtk_p2 {
+	    padding-top: 30px;
+	    font-size: 32px;
+	}
+	.zjy_mtkjp img{
+		padding-top: 88px;
+	}
+	.zjy_mtkjp{
+		height: 484px;
+	}
+	.zjy_btnqr{
+		font-size: 40px;
+    	height: 90px;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+	.luckdraw{
+		left: 10%;
+    	width: 80%;
+    	height: 385px;
+    	background-size: 100% 100%;
+	}
+	.inputbox input{
+		margin: 18% auto 0;
+		font-size: 30px;
+	}
+	.title p{
+		margin-top: 2.5%;
+		font-size: 28px;
+	}
+	.notevent{
+		left: 6%;
+	}
+	.notevent_content p{
+		font-size: 22px;
+    	line-height: 30px;
+	}
+	/*Startdraw*/
+	.content{
+		width: 80%;
+		left: 10%;
+	    background-size: 100% 100%;
+	    height: 520px;
+	}
+	.title p{
+		font-size: 20px;
+	}	
+	.slotMachineButton{
+		height: 33%;
+	}
+	.slotMachinebg,.slotMachine .slot,.slotMachine{
+		height: 135px;
+	}
+	.zjy_lhj{
+		margin: 8% auto 0;
+	}
+	.slot1{
+		background-size: 68% 50%;
+	}
+	.slot4{
+		background-size: 29% 60%;
+	}
+	.slot2{
+		background-size: 39% 50%;
+	}
+	.slot3{
+		background-size: 60% 60%;
+	}
+	.zjy_prizerolllong{
+		width: 620px;
+		height: 161px;
+	}
+	.zjy_prizerollshort3,.zjy_jp{
+		width: 140px;
+		height: 125px;
+	}
+	.zjy_prizerollshort{
+		margin-left: 13px;
+	}
+	.zjy_prizeroll {
+	    padding-top:5%;
+	}
+	.zjy_prizerollshort p{
+		font-size: 20px;
+		line-height: 22px;
+	}
+	.zjy_jp img {
+		padding-top: 30px;
+	}
+	.zjy_three img {
+	    width: 68%;
+	}
+	.zjy_four img {
+	    width: 36%;
+	}
+	.zjy_mtkbg{
+		background-size:100% 100%;
+		width: 70%;
+	    height: 533px;
+	    margin: 15% auto 0;
+	    padding-top: 275px;
+	}
+	.zjy_mtk_p1 {
+	    font-size: 34px;
+	}
+	.zjy_mtk_p2 {
+	    padding-top: 30px;
+	    font-size: 32px;
+	}
+	.zjy_mtkjp img{
+		padding-top: 65px;
+	}
+	.zjy_mtkjp{
+		height: 350px;
+	}
+	.zjy_btnqr{
+		font-size: 36px;
+		height: 80px;
+	}
+}
+
+@media only screen and (min-width: 401px)  and (max-width: 500px) {
+	.clickon{
+		height: 24%;
+	}
+	/*Startdraw*/
+	.content{
+		height: 365px;
+	}
+	.slotMachinebg,.slotMachine .slot,.slotMachine{
+	    height: 97px;
+	}
+	.zjy_lhj{
+		margin: 9% auto 0;
+	}
+	.slotMachineButton{
+		margin: 2% auto 0;
+	}
+	.zjy_jp {
+	    width: 85px;
+	    height: 85px;
+	}
+	.zjy_prizerollshort3{
+		width: 85px;
+	}
+	.zjy_prizerolllong{
+		width: 376px;
+	}
+	.zjy_mtkbg{
+		height: 310px;
+	    margin: 17% auto 0;
+	    padding-top: 192px;
+	}
+	.zjy_mtkjp{
+		height: 185px;
+	}
+}
+@media only screen and (min-width: 350px)  and (max-width: 370px) {
+	/*Startdraw*/
+	.title2 p{
+		margin-top: 4%;
+	}
+	.zjy_lhj{
+		margin: 8% auto 0;
+	}
+	.zjy_prizeroll {
+	    padding-top: 6%;
+	}
+}
+@media only screen and (min-width: 350px) and (max-height: 532px) {
+	.notevent{
+		bottom: 2%;
+	}
+	/*Startdraw*/
+	.content{
+		top: 35%;
+	}
+	.zjy_lhj {
+	    margin: 7% auto 0;
+	}
+	.title2 p{
+		margin-top: 5%;
+	}
+	.slotMachinebg,.slotMachine .slot,.slotMachine{
+		height: 88px;
+	}
+	.zjy_mtkbg{
+		margin: 3% auto 0;
+	}
+}
+@media only screen and (max-width: 349px) {
+	.clickon{
+		height: 17%;
+    	margin: 7% auto 0;
+	}
+	.notevent_content p{
+		font-size: 13px;
+		line-height: 20px;
+	}
+	.title p{
+		font-size: 12px;
+	}
+	/*Startdraw*/
+	.title2 p{
+		margin-top: 1.7%;
+	}
+	.content{
+		top: 40%;
+		height: 283px;
+		background-size: 100% 100%;
+	}
+	.zjy_lhj{
+		margin: 7.6% auto 0;
+	}
+	.slotMachinebg,.slotMachine .slot,.slotMachine{
+	    height: 78px;
+	}
+	.zjy_jp , .zjy_prizerollshort3{
+	    width: 70px;
+	    height: 70px;
+	}
+	.zjy_prizerolllong{
+		width: 325px;
+	}
+	.zjy_mtkbg {
+	    height: 270px;
+	    margin: 3% auto 0;
+	    padding-top: 185px;
+	}
+	.zjy_mtkjp{
+		height: 160px;
+	}
+	.zjy_mtkjp img{
+		padding-top: 28px;
+	}
+}
