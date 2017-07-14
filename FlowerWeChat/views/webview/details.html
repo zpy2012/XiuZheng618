@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>帮您选花</title>
+   	<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+	<div class="zjy_swiper-slide">
+		<div class="topTitle2">
+			<img src="static/img/jtleft.png"/>
+			<span class="name">{{.Name}}</span>
+			<img src="static/img/jtright.png"/>
+		</div>
+		<img src={{.ImagePath}} alt="" class="recommend"/>
+		<div class="recommendtext">
+		{{.Description}}
+		</div>
+		<div class="sevenbottom">
+			<img src="static/img/ewm.png" class="ewm"/>
+			<img src="static/img/dianwo.png" class="dianwo"/>
+			<img src="static/img/jt07png.png" alt="" class="sevenArrow"/>
+			<a href="http://mp.weixin.qq.com/bizmall/mallshelf?id=&t=mall/list&biz=MzI4NDUzNTMyMw==&shelf_id=1&showwxpaytitle=1#wechat_redirect" class="hhsj">花花世界</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="static/js/aliRem.js" ></script>
+    <script type="text/javascript" src="static/js/swiper.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="static/js/index.js" ></script>
+    <!--<script type="text/javascript">
+    	var w = $(window).width();
+    	var h = $(window).height();
+    	alert(w)
+    	alert(h)
+    </script>-->
+</body>
+</html>

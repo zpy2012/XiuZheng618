@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>帮您选花</title>
+   	<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+	<div class="zjy_swiper-slide flex">
+		<ul class="sixswiper">
+			<li>
+				<img src="static/img/jtleft.png" alt="" class="sixjt"/>
+				<span>星辉斑斓</span>
+				<img src="static/img/diandiandian.png" alt="" style="height: 0.16rem;"/>
+			</li>
+			<li>
+				<img src="static/img/wordborder.png" alt="" style="height: 0.13rem;"/>
+				<span>为你推荐</span>
+				<img src="static/img/jtright.png" alt="" class="sixjt"/>
+			</li>
+		</ul>
+		<ul class="Roselist">
+		{{range .flowers}}
+			<li>
+				<img src={{.ImagePath}}/>
+				<div style="display: none;" class="flowerid">{{.Id}}</div>
+				<a class="detail_button" >查看详情</a>
+			</li>
+		{{end}}
+		</ul>
+	</div>
+	<script type="text/javascript" src="static/js/aliRem.js" ></script>
+    <script type="text/javascript" src="static/js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="static/js/index.js" ></script>
+    <!--<script type="text/javascript">
+    	var w = $(window).width();
+    	var h = $(window).height();
+    	alert(w)
+    	alert(h)
+    </script>-->
+</body>
+</html>

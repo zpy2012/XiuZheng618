@@ -1,0 +1,121 @@
+{{template "bgview/header.html" .}}
+
+<div class="tpl-page-container tpl-page-header-fixed">
+
+
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+                Amaze UI 列表
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="/admin" class="nav-link ">
+                            <i class="am-icon-home"></i>
+                            <span>首页管理</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/admin/chart" class="nav-link ">
+                            <i class="am-icon-pagelines"></i>
+                            <span>礼仪花束</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/admin/style" class="nav-link ">
+                            <i class="am-icon-modx"></i>
+                            <span>风格管理</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/admin/products" class="nav-link ">
+                            <i class="am-icon-wpforms"></i>
+                            <span>产品列表</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item">
+                        <a href="/admin/userlist" class="nav-link active">
+                            <i class="am-icon-users"></i>
+                            <span>用户列表</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 用户列表
+                    </div>
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+                            <form class="am-form" action="">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-tx">ID</th>
+                                            <th class="table-id">礼仪花束</th>
+                                            <th class="table-title">性别</th>
+                                            <th class="table-type">对方性别</th>
+                                            <th class="table-new">关系</th>
+                                            <th class="table-news">类别</th>
+                                            <th class="table-author am-hide-sm-only">花分类</th>
+                                            <th class="table-date am-hide-sm-only">创建日期</th>
+                                            <th class="table-set">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {{range .operations}}
+                                        <tr>
+                                            <td>{{.Id}}</td>
+                                            <td>{{.EtiquetteId}}</td>
+                                            <td>{{.Sex}}</td>
+                                         	<td>{{.OtherSex}}</td>
+                                         	<td>{{.Relationship}}</td>
+                                         	<td>{{.Style}}</td>
+                                            <td class="am-hide-sm-only">{{.FlowerCode}}</td>
+                                            <td class="am-hide-sm-only">{{.CreatedTime}}</td>
+                                            <td>
+                                                <div class="am-btn-toolbar">
+                                                    <div class="am-btn-group am-btn-group-xs">
+                                                        查看
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {{end}}
+                                    </tbody>
+                                </table>
+                                <div class="am-cf">
+
+                                    <div class="am-fr">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li class="am-disabled"><a href="#">«</a></li>
+                                            <li class="am-active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/amazeui.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script type="text/javascript" src="static/js/change.js" ></script>
+</body>
+
+</html>

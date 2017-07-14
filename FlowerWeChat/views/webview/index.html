@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>帮您选花</title>
+    <link rel="stylesheet" href="static/css/swiper.min.css">
+    	<link rel="stylesheet" type="text/css" href="static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="zjy_swiper-slide">
+	            	<p class="topTitle">{{.indextitle}}</p>
+	            	<img src={{.indeximage}} class="indeximg"/>
+	            	<div class="bottom swiper-button-next">
+	            		<p><img src="static/img/bottomdian.png" class="bottomspot"/></p>
+	            		<p><img src="static/img/bottom.png" class="bottomarrow"/></p>
+	            	</div>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="zjy_swiper-slide flex">
+	            	<div class="topTitle2">
+            			<img src="static/img/jtleft.png"/>
+            			<span>礼仪花束</span>
+            			<img src="static/img/jtright.png"/>
+            		</div>
+            		<ul class="hualist">
+            			<li>
+            				<div class="zjy_chosebox">
+	            				<div class="choose choosebox selected"></div>
+	            				<img src={{.eflowerimage1}} class="hua1 mask hua"/>
+            				</div>
+                            <div style="display: none;" id="eflowerid1">{{.eflowerid1}}</div>
+            				<div class="wordborder">
+	            				<img src="static/img/wordborder.png"/>
+	            				<span class="hualist_span">{{.eflowertitle1}}</span>
+	            				<img src="static/img/wordborder.png"/>
+            				</div>
+            			</li>
+            			<li class="float_li">
+            				<div class="zjy_chosebox">
+            					<div class="choose choosebox"></div>
+            					<img src={{.eflowerimage2}} class="hua2 hua"/>
+            				</div>
+                            <div style="display: none;" id="eflowerid2">{{.eflowerid2}}</div>
+            				<div class="wordborder">
+	            				<img src="static/img/wordborder.png"/>
+	            				<span class="hualist_span">{{.eflowertitle2}}</span>
+	            				<img src="static/img/wordborder.png"/>
+            				</div>
+            			</li>
+            			<li class="float_li" >
+            				<div class="zjy_chosebox">
+            					<div class="choose choosebox"></div>
+            					<img src={{.eflowerimage3}} class="hua2 hua"/>
+            				</div>
+                            <div style="display: none;" id="eflowerid3">{{.eflowerid3}}</div>
+            				<div class="wordborder">
+	            				<img src="static/img/wordborder.png"/>
+	            				<span class="hualist_spansan">{{.eflowertitle3}}</span>
+	            				<img src="static/img/wordborder.png"/>
+            				</div>
+            			</li>
+            		</ul>
+	            	<div class="bottom swiper-button-next">
+	            		<p><img src="static/img/bottomdian.png" class="bottomspot"/></p>
+	            		<p><img src="static/img/bottom.png" class="bottomarrow"/></p>
+	            	</div>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="zjy_swiper-slide">
+            		<div class="wordborder">
+	            		<img src="static/img/wordborder.png"/>
+	            		<span class="wordborder_span">请选择您的性别</span>
+	            		<img src="static/img/wordborder.png"/>
+            		</div>
+            		<ul class="zjy_manwoman zjy_manwoman1">
+            			<li>
+            				<img src="static/img/man.png" alt=""  class="manmargin"/>
+            				<span class="manspan wmactive">男</span>
+            			</li>
+            			<li>
+            				<img src="static/img/woman01.png" alt="" class="womanmargin"/>
+            				<span class="womanspan">女</span>
+            			</li>
+            		</ul>
+            		<div class="wordborder wordborder1">
+	            		<img src="static/img/wordborder.png"/>
+	            		<span class="wordborder_span">请选择对方的性别</span>
+	            		<img src="static/img/wordborder.png"/>
+            		</div>
+            		<ul class="zjy_manwoman zjy_manwoman2">
+            			<li>
+            				<img src="static/img/man01.png" alt=""  class="manmargin"/>
+            				<span class="manspan">男</span>
+            			</li>
+            			<li>
+            				<img src="static/img/woman.png" alt="" class="womanmargin"/>
+            				<span class="womanspan wmactive">女</span>
+            			</li>
+            		</ul>
+	            	<div class="bottom swiper-button-next">
+	            		<p><img src="static/img/bottomdian.png" class="bottomspot"/></p>
+	            		<p><img src="static/img/bottom.png" class="bottomarrow"/></p>
+	            	</div>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="zjy_swiper-slide flex">
+            		<div class="topTitle3">
+            			<img src="static/img/jtleft.png"/>
+            			<span>您与对方的关系</span>
+            			<img src="static/img/jtright.png"/>
+            		</div>
+            		<ul class="relation">
+            			<li class="relation_a">
+            				<img src="static/img/boygirlGod.png" alt="" />
+            				<button class="btna btncolor btnc">男神/女神</button>
+            			</li>
+            			<li class="relation_b">
+            				<img src="static/img/friends.png" alt="" />
+            				<button class="btnb">朋友</button>
+            			</li>
+            			<li class="relation_c">
+            				<img src="static/img/parents.png" alt="" />
+            				<button class="btnb">长辈</button>
+            			</li>
+            			<li class="relation_d">
+            				<img src="static/img/loves.png" alt="" />
+            				<button class="btna">最佳情侣</button>
+            			</li>
+            		</ul>
+	            	<div class="bottom swiper-button-next">
+	            		<p><img src="static/img/bottomdian.png" class="bottomspot"/></p>
+	            		<p><img src="static/img/bottom.png" class="bottomarrow"/></p>
+	            	</div>
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="zjy_swiper-slide">
+            		<div class="topTitle3">
+            			<img src="static/img/jtleft.png"/>
+            			<span>选择您喜欢的风格</span>
+            			<img src="static/img/jtright.png"/>
+            		</div>
+            		<div class="fivestyle">
+                        <div style="display: none;" id="styleid1">{{.styleid1}}</div>
+            			<button class="wmactive stylebtn">{{.styletitle1}}</button>
+                        <div style="display: none;" id="styleid2">{{.styleid2}}</div>
+            			<button>{{.styletitle2}}</button>
+                        <div style="display: none;" id="styleid3">{{.styleid3}}</div>
+            			<button>{{.styletitle3}}</button>
+            		</div>
+            		<div style="display: none;" class="UserId">{{.userid}}</div>
+            		<a class="choosebtn">智能选花</a>
+            	</div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="static/js/aliRem.js" ></script>
+    <script type="text/javascript" src="static/js/swiper.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="static/js/index.js" ></script>
+    <script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+		    direction: 'vertical',
+		    slidesPerView: 1,
+		    spaceBetween: 0,
+		    nextButton:'.swiper-button-next',
+		    mousewheelControl: true,
+		});
+    </script>
+</body>
+</html>
