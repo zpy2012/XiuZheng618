@@ -12,6 +12,11 @@ type WebIndexController struct {
 }
 
 func (c *WebIndexController) Get() {
+
+	if _, err := models.GetUsersById(wechat.UserId); err != nil {
+		c.Ctx.Redirect(302, "/wechat/auth/login")
+	}
+
 	var index models.Index
 	var etiquetteFlowers [3]models.EtiquetteFlowers
 	var styles [3]models.Styles

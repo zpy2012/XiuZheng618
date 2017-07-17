@@ -18,9 +18,15 @@ func SaveImage(file multipart.File, handler *multipart.FileHeader, id int64, fil
 		os.MkdirAll(filePath, 0777)
 	}
 	n := strings.Split(handler.Filename, ".")
-	fileName := TimeNow().Format(beego.AppConfig.String("time"))+"."+n[len(n)-1]
+	temp := TimeNow().Format(beego.AppConfig.String("time"))
+	temp = strings.Replace(temp," ", "_", 1)
+	temp = strings.Replace(temp,":", "", -1)
+	fileName := temp+"."+n[len(n)-1]
 	dir := filePath+fileName
 	f, err := os.Create(dir)
+	if err != nil {
+		return "",err
+	}
 	CheckError(err)
 	defer f.Close()
 	_, err = io.Copy(f, file)

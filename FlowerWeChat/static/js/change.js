@@ -164,18 +164,10 @@ $(".zjy_style_new").click(function(){
 });
 //users.html
 $("tr .see_userinfo_button").click(function(){
-  var URL = "/admin/userlist/useroperation";
 	var list = $(this).parents(".zjy_user_list tr").index();
 	var id = $(".UserId").eq(list).text();
-  $.post(URL,
-    {
-      id:id
-    },
-    function(data,status){
-      if (data == "成功") {
-        window.location.href=URL;
-      }
-    });
+  var URL = "/admin/userlist/useroperation/?page=1&id="+id;
+  window.location.href=URL;
 });
 
 
@@ -278,30 +270,33 @@ imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL
 //     })
 // });
 $(".submit_button").click(function() {
+    $(".am-modal-bd").text("正在上传，请稍后....");
+    $('#your-modal').modal('open');
     var option = {
         headers : {
             "ClientCallMode" : "ajax"
         }, //添加请求头部
         dataType: "json",
         success : function(data) {
+            $('#your-modal').modal('close');
             if (data.Code == "200") {
-            	$(".am-modal-bd").text(data.Msg);
-		      	$('#your-modal').modal('open');
-		  		setTimeout(function(){
-		  			$('#your-modal').modal('close')
-		  		},1000);//2秒后自动关闭
+                $(".am-modal-bd").text(data.Msg);
+  		      	  $('#your-modal').modal('open');
+      		  		setTimeout(function(){
+      		  			$('#your-modal').modal('close')
+      		  		},1000);//2秒后自动关闭
                 setTimeout(function () {
                     window.location.href = data.JumpUrl;
                 }, 1500);
                 return false
             }else {
-            	$(".am-modal-bd").text(data.Msg);
-		      	$('#your-modal').modal('open');
-			  		setTimeout(function(){
-			  			$('#your-modal').modal('close')
-			  		},1000);//2秒后自动关闭
-                return false;
-            }
+                $(".am-modal-bd").text(data.Msg);
+    		      	$('#your-modal').modal('open');
+    			  		setTimeout(function(){
+    			  			$('#your-modal').modal('close')
+    			  		},1000);//2秒后自动关闭
+                    return false;
+                }
         },
         error : function(data) {
         	$(".am-modal-bd").text(data.Msg);

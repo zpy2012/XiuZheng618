@@ -26,7 +26,9 @@ func (this *BgIndexDeleteController) Post() {
 	i := this.Ctx.Request.FormValue("id")
 	id, _ := strconv.Atoi(i)
 	if index, err := models.GetIndexById(id); err == nil {
-		tools.DeleteImageWithPath(index.ImagePath)
+		if len(index.ImagePath) > 1 {
+			tools.DeleteImageWithPath(index.ImagePath)
+		}
 		if err := models.DeleteIndex(id); err == nil {
 			fmt.Fprint(this.Ctx.ResponseWriter, "成功")
 		}else {

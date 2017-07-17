@@ -16,7 +16,7 @@ func init() {
 	beego.SetStaticPath("/admin/style/static", "static")
 	beego.SetStaticPath("/admin/userlist/static", "static")
 	beego.SetStaticPath("/viewdetail/static", "static")
-	orm.RegisterDataBase("default", "mysql", "root:zpy2012012@@tcp(127.0.0.1:3306)/FlowerWeChat")
+	orm.RegisterDataBase("default", "mysql", "root:12345@tcp(127.0.0.1:3306)/FlowerWeChat")
 }
 
 func main() {
